@@ -11,7 +11,7 @@
 
 body {
     display: grid;
-    place-content: center;
+    place-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -21,8 +21,8 @@ body {
 }
 
 .container {
-    width: 640px;
-    margin: 10px auto;
+    width: 100%;
+    max-width: 640px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -61,4 +61,10 @@ form button {
 
 form button:hover {
     background-color: var(--primary-color-darker);
+}
+
+@media screen and (max-width:640px) {
+    .container {
+        border-radius: 0;
+    }
 }
